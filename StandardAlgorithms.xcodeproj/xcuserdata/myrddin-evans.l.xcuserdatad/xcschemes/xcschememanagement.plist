@@ -7,7 +7,30 @@
 		<key>StandardAlgorithms.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>StandardAlgorithmsTest.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
 			<integer>0</integer>
+		</dict>
+		<key>StandardAlgoritmsTest.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>AC1797AF291678A8005B5091</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>AC3A3D74291BB2FB00AC4D2B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>
