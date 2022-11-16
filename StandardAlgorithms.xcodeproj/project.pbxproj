@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4FC168EF2925700D006DE786 /* SortingTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3A3D87291BB51400AC4D2B /* SortingTest.swift */; };
+		4FC168F029257840006DE786 /* SortingTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3A3D87291BB51400AC4D2B /* SortingTest.swift */; };
 		AC1797B4291678A9005B5091 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1797B3291678A9005B5091 /* main.swift */; };
 		AC3A3D88291BB51400AC4D2B /* SortingTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3A3D87291BB51400AC4D2B /* SortingTest.swift */; };
 		AC3A3D8A291BB67600AC4D2B /* Sorting.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3A3D89291BB67600AC4D2B /* Sorting.swift */; };
@@ -214,7 +214,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4FC168EF2925700D006DE786 /* SortingTest.swift in Sources */,
+				4FC168F029257840006DE786 /* SortingTest.swift in Sources */,
 				AC3A3D8A291BB67600AC4D2B /* Sorting.swift in Sources */,
 				AC1797B4291678A9005B5091 /* main.swift in Sources */,
 			);

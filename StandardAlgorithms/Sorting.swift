@@ -64,4 +64,44 @@ class Sorting {
         }
             return result
     }
+        
+    func insertionSort(data: [Int]) -> [Int] {
+        var result = data
+        for i in 1 ..< result.count {
+            let current = result[i]
+            var j = i - 1
+            while j >= 0 && result[j] > current {
+                result[j+1] = result[j]
+                j -= 1
+            }
+            result[j+1] = current
+        }
+    }
+    
+    func linearSearch(data: [Int], target: Int) -> Bool {
+        for item in data {
+            if item == target {
+                return true
+            }
+        }
+        return false
+    }
+    
+    func binarySearch(data: [Int], target: Int) -> Bool {
+    var high = data.count
+    var low = 0
+    var mid = Int()
+    repeat {
+        mid = (high + low) / 2
+        if target == data[mid] {
+            return true
+        } else if target < data[mid] {
+            high = mid
+        } else {
+            low = mid
+        }
+    } while high > low
+    return false
+    }
+
 }
