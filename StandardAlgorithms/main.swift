@@ -26,8 +26,8 @@ func explainAlgorithms() {
                 print("The insertion sort is a sorting algorithm that just inserts each item into its correct place in the array immediately, by 'shuffling' through the items until it finds one greater than the current item, where it inserts it just before said item.")
                 print("Time Complexity: O(n) - best, O(n^2) - average and worst, Space Complexity: O(1)")
             case 4:
-                print("")
-                print("Time Coplexity: O(nlog(n)) - best + average, O(n^2) - worst, Space Complexity: ")
+                print("The quick sort is similar to the merge sort, but instead of always picking the midpoint of the array, it chooses a pivot point anywhere in the array. Once this point has been chosen, it puts all of the items smaller than it in a separate array, and all of the items larger than it in another array. Once the original array has been sorted in this way, a new pivot from each of the resultant arrays is chosen, and the same process happens until every item in the array is sorted. Then, it is rebuilt into a sorted array of all the item from the start.")
+                print("Time Coplexity: O(nlog(n)) - best + average, O(n^2) - worst, Space Complexity: O(n)")
             case 5:
                 print("The linear search is a search algorithm where it goes through the array, index by index, and check each one against a specified target, and returns true if they are equal, otherwise returning flase (after passing through the whole array)")
                 print("Time Complexity: O(1) - best, O(n) - average + worst, Space Complexity: O(1)")
