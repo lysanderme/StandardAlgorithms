@@ -40,3 +40,5 @@ func explainAlgorithms() {
         }
     }
 }
+
+explainAlgorithms()

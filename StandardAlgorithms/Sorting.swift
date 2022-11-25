@@ -89,33 +89,6 @@ class Sorting {
         return result
     }
     
-    
-    func linearSearch(data: [Int], target: Int) -> Bool {
-        for item in data {
-            if item == target {
-                return true
-            }
-        }
-        return false
-    }
-    
-    func binarySearch(data: [Int], target: Int) -> Bool {
-    var high = data.count
-    var low = 0
-    var mid = Int()
-    repeat {
-        mid = (high + low) / 2
-        if target == data[mid] {
-            return true
-        } else if target < data[mid] {
-            high = mid
-        } else {
-            low = mid
-        }
-    } while high > low
-    return false
-    }
-    
     func quickSort(_ array: [Int]) -> [Int] {
       let data = array
 

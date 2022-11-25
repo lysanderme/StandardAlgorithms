@@ -6,14 +6,13 @@
 //
 
 import XCTest
-@testable import StandardAlgorithms
 
 class SortingTest: XCTestCase {
 
     func testBubbleSortWithUnsortedArrayOfIntegersReturnsSortedArray() {
         //arrange - test setup
-        let unsortedArray = [3, 1, 10, 15, 4]
-        let expected = [1, 3, 4, 10, 15]
+        let unsortedArray = [3,1,10,15,4]
+        let expected = [1,3,4,10,15]
         let sorting = Sorting()
         //act - perform the action we want to test
         let sortedArray = sorting.bubbleSort(data: unsortedArray)
@@ -23,8 +22,8 @@ class SortingTest: XCTestCase {
     
     func testMergeSortWithUnsortedArrayOfIntegersReturnsSortedArray() {
         //arrange - test setup
-        let unsortedArray = [3, 1, 10, 15, 4]
-        let expected = [1, 3, 4, 10, 15]
+        let unsortedArray = [3,1,10,15,4]
+        let expected = [1,3,4,10,15]
         let sorting = Sorting()
         //act - perform the action we want to test
         let sortedArray = sorting.mergeSort(data: unsortedArray)
@@ -34,8 +33,8 @@ class SortingTest: XCTestCase {
     
     func testInsertionSortWithUnsortedArrayOfIntegersReturnsSortedArray() {
         //arrange - test setup
-        let unsortedArray = [3, 1, 10, 15, 4]
-        let expected = [1, 3, 4, 10, 15]
+        let unsortedArray = [3,1,10,15,4]
+        let expected = [1,3,4,10,15]
         let sorting = Sorting()
         //act - perform the action we want to test
         let sortedArray = sorting.insertionSort(data: unsortedArray)
@@ -45,8 +44,8 @@ class SortingTest: XCTestCase {
     
     func testQuickSortWithUnsortedArrayOfIntegersReturnsSortedArray() {
         //arrange - test setup
-        let unsortedArray = [3, 1, 10, 15, 4]
-        let expected = [1, 3, 4, 10, 15]
+        let unsortedArray = [3,1,10,15,4]
+        let expected = [1,3,4,10,15]
         let sorting = Sorting()
         //act - perform the action we want to test
         let sortedArray = sorting.quickSort(unsortedArray)
@@ -54,28 +53,6 @@ class SortingTest: XCTestCase {
         XCTAssertEqual(sortedArray, expected)
     }
     
-    func testLinearSearchWithSortedArrayReturnsBoolean() {
-        //arrange - test setup
-        let sortedArray = [1,3,4,10,15]
-        let expected = true
-        let target = 15
-        let sorting = Sorting()
-        //act - perform the action we want to test
-        let resultOfTest = sorting.linearSearch(data: sortedArray, target: target)
-        //assert - check the action behaved how we expected
-        XCTAssertEqual(resultOfTest, expected)
-    }
     
-    func testBinarySearchWithSortedArrayReturnsBoolean() {
-        //arrange - test setup
-        let sortedArray = [1,3,4,10,15]
-        let expected = true
-        let target = 15
-        let sorting = Sorting()
-        //act - perform the action we want to test
-        let resultOfTest = sorting.binarySearch(data: sortedArray, target: target)
-        //assert - check the action behaved how we expected
-        XCTAssertEqual(resultOfTest, expected)
-    }
 
 }
