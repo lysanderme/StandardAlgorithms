@@ -39,15 +39,5 @@ class UnknownTest: XCTestCase {
         XCTAssertEqual(resultantSum, expected)
     }
     
-    func testSecondSmallestItemInArrayIsCorrect() {
-        //arrange - test setup
-        let exampleArray = [3,1,10,15,4]
-        let expected = 3
-        let unknown = Unknown()
-        //act - perform the action we want to test
-        let resultantItem = unknown.getSecondSmallest(data: exampleArray)
-        //assert - check the action behaved how we expected
-        XCTAssertEqual(resultantItem, expected)
-    }
     
 }
