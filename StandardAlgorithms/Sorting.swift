@@ -90,64 +90,48 @@ class Sorting {
     }
     
     func quickSort(_ array: [Int]) -> [Int] {
-      let data = array
+        let data = array
 
-
-
-     if data.count <= 1 {
-        return data
-      }
-
-
-
+        if data.count <= 1 {
+            return data
+        }
      
-      var pivot = 0
+        var pivot = 0
 
-
-
-     if data.count > 3 {
-        let midpoint: Int = data[data.count / 2]
-        let last = data[data.count - 1]
+        if data.count > 3 {
+            let midpoint: Int = data[data.count / 2]
+            let last = data[data.count - 1]
       
-        if (midpoint <= data[0] && midpoint >= last) || (midpoint >= data[0] && midpoint <= last){
-          pivot = data.count / 2
-        } else if (last >= data[0] && last <= midpoint) || (last <= data[0] && last >= midpoint) {
-          pivot = data.count - 1
+            if (midpoint <= data[0] && midpoint >= last) || (midpoint >= data[0] && midpoint <= last){
+                pivot = data.count / 2
+            } else if (last >= data[0] && last <= midpoint) || (last <= data[0] && last >= midpoint) {
+                pivot = data.count - 1
+            }
         }
-      }
-
-
-
      
-     
-      var smallerArray: [Int] = []
-      var largerArray: [Int] = []
-      var pivotValueCount = 0
+        var smallerArray = [Int]()
+        var largerArray = [Int]()
+        var pivotValueCount = 0
 
-
-
-     for i in 0..<data.count {
-        if data[i] < data[pivot] {
-          smallerArray.append(data[i])
-        } else if data[i] > data[pivot] {
-          largerArray.append(data[i])
-        } else if data[i] == data[pivot] {
-          pivotValueCount += 1
-          if pivotValueCount > 1 {
-            largerArray.append(data[i])
-          }
+        for i in 0..<data.count {
+            if data[i] < data[pivot] {
+                smallerArray.append(data[i])
+            } else if data[i] > data[pivot] {
+                largerArray.append(data[i])
+            } else if data[i] == data[pivot] {
+                pivotValueCount += 1
+                if pivotValueCount > 1 {
+                    largerArray.append(data[i])
+                }
+            }
         }
-      }
 
-
-
-     
-      var result: [Int] = quickSort(smallerArray)
-      result.append(data[pivot])
-      for item in quickSort(largerArray){
-        result.append(item)
-      }
-      return result
+        var result: [Int] = quickSort(smallerArray)
+        result.append(data[pivot])
+        for item in quickSort(largerArray){
+            result.append(item)
+        }
+        return result
     }
     
 }
