@@ -26,9 +26,9 @@ class Sorting {
         return result
     }
     
-
     
-        
+    
+    
     func insertionSort(data: [Int]) -> [Int] {
         var result = data
         for i in 1 ..< result.count {
@@ -50,40 +50,34 @@ class Sorting {
             var left = Array(result[0 ..< mid])
             var right = Array(result[mid ..< data.count])
 
-
-
             left = mergeSort(data: left)
             right = mergeSort(data: right)
 
+            var leftCounter = 0
+            var rightCounter = 0
+            var resultCounter = 0
 
-
-            var i = 0
-            var j = 0
-            var k = 0
-
-
-
-            while i < left.count && j < right.count {
-               if left[i] <= right[j] {
-                   result[k] = left[i]
-                   i += 1
-               } else {
-                   result[k] = right[j]
-                   j += 1
-               }
-               k += 1
+            while leftCounter < left.count && rightCounter < right.count {
+                if left[leftCounter] <= right[rightCounter] {
+                    result[resultCounter] = left[leftCounter]
+                    leftCounter += 1
+                } else {
+                    result[resultCounter] = right[rightCounter]
+                    rightCounter += 1
+                }
+                resultCounter += 1
             }
-            
-            while i < left.count {
-                result[k] = left[i]
-                i += 1
-                k += 1
+
+            while leftCounter < left.count {
+                result[resultCounter] = left[leftCounter]
+                leftCounter += 1
+                resultCounter += 1
             }
-            
-            while j < right.count {
-                result[k] = right[j]
-                j += 1
-                k += 1
+
+            while rightCounter < right.count {
+                result[resultCounter] = right[rightCounter]
+                rightCounter += 1
+                resultCounter += 1
             }
         }
         return result
@@ -95,20 +89,20 @@ class Sorting {
         if data.count <= 1 {
             return data
         }
-     
+
         var pivot = 0
 
         if data.count > 3 {
             let midpoint: Int = data[data.count / 2]
             let last = data[data.count - 1]
-      
+
             if (midpoint <= data[0] && midpoint >= last) || (midpoint >= data[0] && midpoint <= last){
                 pivot = data.count / 2
             } else if (last >= data[0] && last <= midpoint) || (last <= data[0] && last >= midpoint) {
                 pivot = data.count - 1
             }
         }
-     
+
         var smallerArray = [Int]()
         var largerArray = [Int]()
         var pivotValueCount = 0
