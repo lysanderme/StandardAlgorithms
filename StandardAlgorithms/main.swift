@@ -33,7 +33,7 @@ func explainAlgorithms() {
                 print("Time Complexity: O(1) - best, O(n) - average + worst, Space Complexity: O(1)")
             case 6:
                 print("The binary search is a searching algorithm that uses a divide and conquer approach, but it requires a sorted array. It finds the midpoint of the array, and then check if the target is higher/lower than it, and then it checks the relevant half of the array the same way until it find the target, or gets to the end of the array.")
-                print("Time Complexity: O(1) - best, O(lon(n)) - average + worst, Space Complexity: O(1)")
+                print("Time Complexity: O(1) - best, O(log(n)) - average + worst, Space Complexity: O(1)")
             default:
                 print("INVALID INPUT")
             }
